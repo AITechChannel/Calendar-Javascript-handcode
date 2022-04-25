@@ -1,456 +1,74 @@
-header {
-  background-color: #fff;
-  font-size: 2.4rem;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.calendar-container {
+  width: 500px;
+  background-color: #365a5c;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
-header .navbar {
-  height: 100px;
+.calendar-container .header {
+  background-color: #28a06c;
+  text-align: center;
+  padding-top: 10px;
+}
+.calendar-container .header .title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  font-size: 24px;
-}
-header .navbar .logo {
-  line-height: 100px;
-  color: #03a4ed;
-  text-decoration: none;
-  font-weight: 700;
-}
-header .navbar .logo span {
-  color: #fe3f40;
-}
-header .navbar ul {
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-header .navbar ul li a {
-  display: block;
-  line-height: 40px;
-  padding: 0 20px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #2a2a2a;
-  transition: all ease 0.3s;
-}
-header .navbar ul li a:hover {
-  color: #fe3f40;
-}
-header .navbar ul li .active {
-  color: #fe3f40;
-}
-header .navbar ul li .navbar-btn {
-  background-color: #fe3f40;
-  border-radius: 20px;
-  margin-left: 40px;
-}
-header .navbar ul li .navbar-btn a {
+  margin: 0 20px;
   color: #fff;
+  padding: 20px 0;
+  font-size: 3rem !important;
 }
-header .navbar .menu-btn:hover {
+.calendar-container .header .title i {
+  font-size: 3rem;
+  padding: 5px;
+}
+.calendar-container .header .title i:hover {
   cursor: pointer;
 }
-
-.banner {
-  position: relative;
-  padding: 140px 0 120px 0;
-}
-.banner .banner-left {
-  margin: 4px 40px 40px 0;
-}
-.banner .banner-left h6 {
-  font-size: 1.8rem;
-  color: #fe3f40;
-  margin-bottom: 15px;
-}
-.banner .banner-left h1 {
-  font-size: 5rem;
-}
-.banner .banner-left h1 span {
-  color: #fe3f40;
-}
-.banner .banner-left p {
-  font-size: 1.5rem;
-  margin: 20px 0;
-}
-.banner .banner-left .banner-input {
-  position: relative;
-  display: flex;
-  width: 70%;
-  align-items: center;
-  margin-top: 20px;
-}
-.banner .banner-left .banner-input input {
-  font-size: 1.5rem;
-  background-color: #03a4ed;
-  height: 66px;
-  border-radius: 33px;
-  width: 100%;
-  border: none;
-  padding: 0 170px 0 30px;
-  outline: none;
-  caret-color: #fff;
-}
-.banner .banner-left .banner-input input::placeholder {
+.calendar-container .header .day-name {
+  padding: 20px 0;
   color: #fff;
 }
-.banner .banner-left .banner-input button {
-  font-size: 1.5rem;
-  position: absolute;
-  padding: 12px 25px;
-  border-radius: 30px;
-  right: 10px;
-  border: none;
+.calendar-container .header .day-name ul {
+  display: flex;
 }
-.banner .banner-right {
-  margin: 40px 0;
+.calendar-container .header .day-name ul li {
+  flex: 1;
+  font-size: 1.6rem;
 }
-.banner .banner-right img {
-  width: 100%;
-}
-.banner .img-left {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.about {
-  background-image: url(../images/about-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 120px 0 120px 0;
-  align-items: center;
-}
-.about .about-left {
-  transition: all ease-in-out 1s;
-  opacity: 0;
-}
-.about .about-left img {
-  width: 100%;
-}
-.about .about-right {
+.calendar-container .body ul {
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
 }
-.about .about-right .about-list {
-  opacity: 0;
-  transition: all ease-in-out 0.5s;
-  margin: 20px 0;
-  display: flex;
-  width: 50%;
-}
-.about .about-right .about-list .about-des {
-  padding-left: 20px;
-}
-.about .about-right .about-list .about-des h4 {
-  color: #fff;
-}
-.about .about-right .about-list .about-des p {
-  color: #fff;
-}
-
-.services {
-  padding: 140px 0px 0 0px;
-  align-items: center;
-}
-.services .services-left img {
-  width: 100%;
-}
-.services .services-right h2 {
-  margin-bottom: 20px;
-}
-.services .services-right p {
-  margin: 30px 0 60px 0;
-}
-.services .services-right .services-process h4 {
-  margin-bottom: 20px;
-}
-.services .services-right .services-process .bar-container {
-  margin-bottom: 30px;
-  width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  background-color: #f7eff1;
-}
-.services .services-right .services-process .bar-container .process {
-  height: 100%;
-  width: 84%;
-  background-color: #fe3f40;
-  position: relative;
-  border-radius: 4px;
-}
-.services .services-right .services-process .bar-container .process span {
-  position: absolute;
-  bottom: 8px;
-  right: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.portfolio {
-  padding: 120px 0 0 0;
-}
-.portfolio .porfolio-title {
-  text-align: center;
-}
-.portfolio .row:last-child {
-  padding: 120px 0;
-}
-.portfolio .row:last-child .por-item {
-  position: relative;
-}
-.portfolio .row:last-child .por-item .item-visible {
-  position: relative;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.06);
-  border-radius: 20px;
-  padding: 40px 0;
-  transition: all ease 1s;
-  z-index: 5;
-  opacity: 1;
-}
-.portfolio .row:last-child .por-item .item-hidden {
-  top: 2px;
-  right: 0;
-  left: 0;
-  width: 100%;
-  border: none;
-  position: absolute;
-  padding: 20px;
-  background: linear-gradient(105deg, #ff4d1e 0%, #ff2c6d 100%);
-  border-radius: 20px;
-  color: #fff;
-  transition: all ease 1s;
-}
-.portfolio .row:last-child .por-item .item-hidden h4 {
-  margin-bottom: 20px;
-}
-.portfolio .row:last-child .por-item .item-hidden::after {
-  content: "";
-  border-color: #fe3f40 transparent transparent transparent;
-  border-width: 10px 10px;
-  border-style: solid;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all ease 1s;
-}
-.portfolio .row:last-child .por-item:hover .item-visible {
-  transform: translateY(50%);
-}
-.portfolio .row:last-child .por-item:hover .item-hidden {
-  top: -40%;
-}
-
-.blog {
-  padding: 120px 0;
-}
-.blog .blog-left-top {
-  margin-bottom: 40px;
-}
-.blog .blog-left-bottom .blog-img {
-  position: relative;
-}
-.blog .blog-left-bottom .blog-img img {
-  border-radius: 20px;
-  margin-bottom: 50px;
-  width: 100%;
-}
-.blog .blog-left-bottom .blog-img .calendar-left {
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.06);
-  padding: 20px;
-  padding-bottom: 40px;
-  position: absolute;
-  bottom: 0;
-  background-color: #fff;
-  width: 80%;
-  border-radius: 20px;
-}
-.blog .blog-left-bottom .blog-img .calendar-left ul {
-  margin-bottom: 20px;
-  align-items: center;
-  display: flex;
-}
-.blog .blog-left-bottom .blog-img .calendar-left ul li {
-  font-size: 1.5rem;
-  color: #afafaf;
-  margin-right: 20px;
-}
-.blog .blog-left-bottom .blog-img .calendar-left ul li i {
-  color: #fe3f40;
-  margin-right: 8px;
-}
-.blog .blog-left-bottom .blog-img .calendar-left h4 {
-  margin-bottom: 20px;
-}
-.blog .blog-left-bottom .btn-left {
-  background-color: #03a4ed;
-  border-radius: 20px;
-  margin-left: 40px;
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  border: none;
-  color: #fff;
-  margin: 40px 0 20px 0;
-}
-.blog .blog-right-top {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-}
-.blog .blog-right-top img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.blog .blog-right-bottom .list-right {
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-.blog .blog-right-bottom .list-right ul li {
-  align-items: center;
-  display: flex;
-}
-.blog .blog-right-bottom .list-right ul li .des-right {
-  margin-right: 40px;
-}
-.blog .blog-right-bottom .list-right ul li .des-right span {
-  margin-bottom: 20px;
-  display: inline-block;
-  font-size: 1.5rem;
-}
-.blog .blog-right-bottom .list-right ul li .des-right span i {
-  color: #fe3f40;
-  margin-right: 8px;
-}
-.blog .blog-right-bottom .list-right ul li .des-right h4 {
-  margin-bottom: 20px;
-}
-.blog .blog-right-bottom .list-right ul li .img-right {
-  width: 70%;
-}
-.blog .blog-right-bottom .list-right ul li .img-right img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.message {
-  background-image: url(../images/contact-bg.png);
-  padding: 140px 0 120px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.message .message-left {
-  color: #fff;
-}
-.message .message-left h2 {
-  margin-bottom: 40px;
-}
-.message .message-left p {
-  margin-bottom: 40px;
-}
-.message .message-left .message-call {
-  display: flex;
-  align-items: center;
-}
-.message .message-left .message-call span {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-}
-.message .message-left .message-call span i {
+.calendar-container .body ul li {
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 25px;
-  color: #fe3f40;
-  margin-right: 8px;
-}
-.message .message-left .message-call h4 {
-  margin-right: 20px;
-}
-.message .message-right {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 25px;
-}
-.message .message-right input {
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  padding: 0 20px;
-  font-size: 1.5rem;
-  outline: none;
-  background-color: #d1f3ff;
-  width: 100%;
-}
-.message .message-right .error {
-  border: 1px solid #fe3f40;
-}
-.message .message-right .full-name {
-  display: flex;
-}
-.message .message-right .full-name .name-container, .message .message-right .full-name .surname-container {
-  margin-bottom: 20px;
-  flex: 1;
-}
-.message .message-right .full-name .name-container {
-  margin-right: 20px;
-}
-.message .message-right .email-container {
-  margin-bottom: 20px;
-}
-.message .message-right textarea {
-  border-radius: 25px;
-  margin-bottom: 20px;
-  width: none;
-  resize: vertical;
-  background-color: #d1f3ff;
-  outline: none;
-  border: 2px solid #d1f3ff;
-  padding: 20px;
-  font-size: 1.5rem;
-}
-.message .message-right textarea:focus {
-  border: 2px solid #99e4ff;
-}
-.message .message-right button {
-  padding: 10px 20px;
-  background-color: #03a4ed;
+  height: 70px;
+  width: 14.2857142857%;
   color: #fff;
-  align-self: flex-start;
-  height: 40px;
-  border-radius: 20px;
-  border: none;
-  font-size: 1.5rem;
+  border: 1px solid #365a5c;
+  border-radius: 50%;
 }
-.message .message-right button:hover {
-  cursor: pointer;
+.calendar-container .body ul li:hover {
+  transition: all ease 0.3s;
+  background-color: #43686c;
 }
-.message .message-right .message-error {
-  font-size: 1.2rem;
-  margin: 5px 0 0 0;
-  color: #fe3f40;
-  padding: 0 20px;
+.calendar-container .body ul .out-day {
+  color: #9b9b9b;
+}
+.calendar-container .body ul .today {
+  background-color: #28a06c;
+  border-radius: 50%;
 }
 
-footer .footer-content {
-  text-align: center;
-  margin: 40px 0;
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#255a4b, #a2a3a5);
 }
 
 :root {
